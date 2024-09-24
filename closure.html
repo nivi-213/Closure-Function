@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure Function</title>
+  </head>
+  <body>
+    <h1>Closure Function</h1>
+  </body>
+  <script>
+    function outerScope() {
+      let outerVariable = "i am OuterFunction";
+
+      function innerScope() {
+        let innerVariable = "i am InnerFunction";
+        console.log(innerVariable);
+        console.log(outerVariable);
+        return innerVariable;
+      }
+      return innerScope();
+    }
+    console.log(outerScope());
+  </script>
+</html>
